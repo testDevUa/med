@@ -2,15 +2,16 @@ import './App.css';
 import Routes from 'routes';
 import { BrowserRouter } from 'react-router-dom';
 import TopBar from 'components/topBar';
+import {CurrentUserProvider} from 'contexts/currentUser';
 
 function App() {
   return (
-    <div className="App">
+    <CurrentUserProvider>
       <BrowserRouter>
         <TopBar />
         <Routes />
       </BrowserRouter>
-    </div>
+    </CurrentUserProvider>
   );
 }
 
